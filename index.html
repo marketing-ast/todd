@@ -91,23 +91,25 @@
 
           <div class="section-ornaments section-ornaments--hero" aria-hidden="true">
             <svg class="line-object line-object--pencil" viewBox="0 0 252 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M26 58L164 18L194 42L56 82" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M164 18L216 4L236 22L194 42" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M56 82L44 64" stroke="currentColor" stroke-width="1.6"/>
+              <path class="main-stroke" d="M26 58L164 18L194 42L56 82"/>
+              <path class="accent-stroke" d="M164 18L216 4L236 22L194 42"/>
+              <path class="main-stroke" d="M56 82L44 64"/>
+              <path class="accent-stroke" d="M83 42L176 18"/>
             </svg>
 
             <svg class="line-object line-object--paperclip" viewBox="0 0 120 186" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 16H96V170" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M24 16V170H78" stroke="currentColor" stroke-width="1.6"/>
-              <rect x="38" y="34" width="44" height="24" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M40 82H54M66 82H80M40 106H54M66 106H80M40 130H54M66 130H80M40 154H54" stroke="currentColor" stroke-width="1.6"/>
+              <path class="main-stroke" d="M28 20H92V166"/>
+              <path class="main-stroke" d="M28 20V166H78"/>
+              <rect class="accent-stroke" x="40" y="34" width="40" height="26"/>
+              <path class="main-stroke" d="M42 86H56M66 86H78M42 110H56M66 110H78M42 134H56M66 134H78M42 158H56"/>
+              <path class="accent-stroke" d="M24 20L14 8"/>
             </svg>
 
             <svg class="line-object line-object--ruler" viewBox="0 0 236 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="46" cy="26" r="18" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M64 26H180" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M180 26L212 10V42L180 26Z" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M28 26H12" stroke="currentColor" stroke-width="1.6"/>
+              <circle class="main-stroke" cx="46" cy="26" r="18"/>
+              <path class="main-stroke" d="M64 26H180"/>
+              <path class="accent-stroke" d="M180 26L212 10V42L180 26Z"/>
+              <path class="main-stroke" d="M28 26H12"/>
             </svg>
           </div>
         </section>
@@ -220,9 +222,10 @@
             </svg>
 
             <svg class="line-object line-object--mouse" viewBox="0 0 126 176" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 18H102V160" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M24 18V160H82" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M42 50H84M42 78H84M42 106H84" stroke="currentColor" stroke-width="1.6"/>
+              <circle class="main-stroke" cx="42" cy="88" r="22"/>
+              <path class="main-stroke" d="M58 72L94 36C101 29 112 29 118 36C124 42 124 53 118 60L82 96"/>
+              <path class="accent-stroke" d="M74 56L98 80"/>
+              <path class="accent-stroke" d="M28 88H20"/>
             </svg>
           </div>
         </section>
@@ -313,8 +316,8 @@
             <div class="contact-stack">
               <div class="contact-copy" data-reveal>
                 <p>
-                  Если удобнее написать сразу, используйте один из быстрых контактов ниже. В WhatsApp
-                  уже подставлен готовый текст, чтобы не набирать его с нуля.
+                  Если хотите быстро понять, подходим ли мы вашему учету, просто напишите в WhatsApp
+                  или позвоните. Без форм, без Telegram и без лишнего круга действий.
                 </p>
 
                 <div class="contact-links">
@@ -327,59 +330,27 @@
                     WhatsApp
                   </a>
                 </div>
+                <p class="contact-note">
+                  В сообщении уже зашит стартовый текст: «(it) здравствуйте, на счет услуг бухгалтера».
+                  Можно отправить как есть и дальше обсудить уже вашу реальную ситуацию.
+                </p>
               </div>
-
-              <form class="lead-form" id="lead-form" data-reveal novalidate>
-                <label class="field">
-                  <span>Имя</span>
-                  <input
-                    type="text"
-                    name="name"
-                    autocomplete="name"
-                    placeholder="Как к вам обращаться…"
-                  >
-                </label>
-
-                <label class="field">
-                  <span>Телефон</span>
-                  <input
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    autocomplete="tel"
-                    inputmode="tel"
-                    placeholder="+7 (700) 000-00-00"
-                    aria-describedby="phone-hint"
-                    required
-                  >
-                </label>
-
-                <p class="field-hint" id="phone-hint">Введите номер Казахстана в формате +7 (700) 000-00-00.</p>
-
-                <input class="field--hidden" type="text" name="website" tabindex="-1" autocomplete="off">
-
-                <button class="button button--primary button--submit" type="submit">
-                  Обсудить специфику
-                </button>
-
-                <p class="form-note">Имя можно оставить пустым. Номер телефона обязателен.</p>
-                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-              </form>
             </div>
           </div>
 
           <div class="section-ornaments section-ornaments--cta" aria-hidden="true">
             <svg class="line-object line-object--calculator" viewBox="0 0 150 214" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 12H130V202" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M18 12V202H98" stroke="currentColor" stroke-width="1.6"/>
-              <rect x="38" y="30" width="72" height="34" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M40 92H58M76 92H94M40 122H58M76 122H94M40 152H58M76 152H94M40 182H58" stroke="currentColor" stroke-width="1.6"/>
+              <path class="main-stroke" d="M18 12H130V202"/>
+              <path class="main-stroke" d="M18 12V202H98"/>
+              <rect class="accent-stroke" x="38" y="30" width="72" height="34"/>
+              <path class="main-stroke" d="M40 92H58M76 92H94M40 122H58M76 122H94M40 152H58M76 152H94M40 182H58"/>
             </svg>
 
             <svg class="line-object line-object--tabs" viewBox="0 0 190 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 88H172" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M34 88L52 36H138L156 88" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M62 98H128" stroke="currentColor" stroke-width="1.6"/>
+              <path class="main-stroke" d="M42 24H148V90H42Z"/>
+              <path class="accent-stroke" d="M56 38H134V76H56Z"/>
+              <path class="main-stroke" d="M20 104H170"/>
+              <path class="accent-stroke" d="M74 104L64 120H126L116 104"/>
             </svg>
           </div>
         </section>
