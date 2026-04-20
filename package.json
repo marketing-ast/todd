@@ -1,0 +1,10 @@
+{
+  "name": "landingbuh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IT accounting landing page with Telegram lead delivery",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  }
+}
