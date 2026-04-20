@@ -317,6 +317,15 @@ h3,
   text-wrap: balance;
 }
 
+.headline-accent {
+  color: var(--brick);
+}
+
+.section--cta .headline-accent,
+.focus-card .headline-accent {
+  color: rgba(196, 145, 130, 0.96);
+}
+
 h1 {
   max-width: 9.4ch;
   font-size: clamp(3.15rem, 6.6vw, 6.2rem);
