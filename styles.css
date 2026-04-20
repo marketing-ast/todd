@@ -9,10 +9,10 @@
   --muted-strong: rgba(17, 17, 17, 0.82);
   --line: rgba(17, 17, 17, 0.16);
   --line-strong: rgba(17, 17, 17, 0.34);
-  --accent: #d8362a;
-  --accent-soft: rgba(216, 54, 42, 0.1);
-  --brick: #a56d60;
-  --brick-soft: rgba(165, 109, 96, 0.58);
+  --accent: #eb0028;
+  --accent-soft: rgba(235, 0, 40, 0.12);
+  --brick: #eb0028;
+  --brick-soft: rgba(235, 0, 40, 0.62);
   --white: #fffdf9;
   --container: min(1500px, calc(100vw - 40px));
   --content-end: 13;
@@ -323,7 +323,7 @@ h3,
 
 .section--cta .headline-accent,
 .focus-card .headline-accent {
-  color: rgba(196, 145, 130, 0.96);
+  color: rgba(255, 91, 119, 0.98);
 }
 
 h1 {
@@ -705,7 +705,7 @@ h3 {
 }
 
 .section--cta .line-object .accent-stroke {
-  stroke: rgba(181, 124, 108, 0.78);
+  stroke: rgba(255, 91, 119, 0.82);
 }
 
 [data-reveal] {
