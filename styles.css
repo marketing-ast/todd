@@ -14,7 +14,11 @@
   --brick: #7f011f;
   --brick-soft: rgba(127, 1, 31, 0.68);
   --white: #fffdf9;
-  --container: min(1500px, calc(100vw - 40px));
+  --container-gutter: 20px;
+  --container: min(1500px, calc(100vw - (var(--container-gutter) * 2)));
+  --content-narrow: 880px;
+  --content-medium: 980px;
+  --content-wide: 1120px;
   --content-end: 13;
   --header-offset: 96px;
 }
@@ -175,6 +179,7 @@ summary {
 }
 
 .brand__text {
+  max-width: 100%;
   font-size: 0.8rem;
   font-weight: 500;
   line-height: 1.35;
@@ -264,6 +269,7 @@ summary {
 .team-grid,
 .contact-stack {
   grid-column: 1 / var(--content-end);
+  justify-self: start;
 }
 
 .hero-panel,
@@ -287,8 +293,8 @@ summary {
   display: grid;
   gap: 0;
   align-content: center;
-  width: min(100%, 880px);
-  padding-right: clamp(0px, 10vw, 80px);
+  width: 100%;
+  max-width: var(--content-narrow);
 }
 
 .eyebrow,
@@ -461,8 +467,8 @@ h3 {
 .section-head {
   display: grid;
   gap: 16px;
-  width: min(100%, 980px);
-  padding-right: clamp(0px, 18vw, 230px);
+  width: 100%;
+  max-width: var(--content-medium);
 }
 
 .section-head--wide h2 {
@@ -500,8 +506,8 @@ h3 {
   display: grid;
   gap: 16px;
   margin-top: 40px;
-  width: min(100%, 1120px);
-  padding-right: clamp(0px, 15vw, 200px);
+  width: 100%;
+  max-width: var(--content-wide);
 }
 
 .fit-grid {
@@ -616,8 +622,8 @@ h3 {
   display: grid;
   gap: 22px;
   margin-top: 42px;
-  width: min(100%, 1120px);
-  padding-right: clamp(0px, 18vw, 240px);
+  width: 100%;
+  max-width: var(--content-wide);
 }
 
 .contact-copy {
@@ -647,7 +653,6 @@ h3 {
 .section--cta .contact-stack {
   gap: 16px;
   margin-top: 26px;
-  padding-right: clamp(0px, 8vw, 110px);
 }
 
 .section--cta .contact-copy {
@@ -723,7 +728,7 @@ h3 {
 
 @media (min-width: 760px) {
   :root {
-    --container: min(1500px, calc(100vw - 72px));
+    --container-gutter: 36px;
   }
 
   .hero-actions,
@@ -927,7 +932,11 @@ h3 {
   .contact-stack,
   .hero-panel__body {
     width: 100%;
-    padding-right: 0;
+    max-width: 100%;
+  }
+
+  h1 span:last-child {
+    white-space: normal;
   }
 }
 
