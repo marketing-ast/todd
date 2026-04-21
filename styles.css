@@ -13,9 +13,12 @@
   --accent-soft: rgba(127, 1, 31, 0.14);
   --brick: #7f011f;
   --brick-soft: rgba(127, 1, 31, 0.68);
+  --whatsapp-fill: #a9b7a0;
+  --whatsapp-fill-strong: #94a38b;
+  --whatsapp-ink: #243126;
   --white: #fffdf9;
   --container-max: 1500px;
-  --container-gutter: 18px;
+  --container-gutter: clamp(24px, 3vw, 38px);
   --content-narrow: 760px;
   --content-medium: 920px;
   --content-wide: 1120px;
@@ -149,7 +152,7 @@ summary {
   grid-template-columns: minmax(0, auto);
   gap: 12px;
   align-items: center;
-  padding: 10px 0;
+  padding-block: 10px;
 }
 
 .brand {
@@ -314,17 +317,17 @@ h3,
 }
 
 h1 {
-  max-width: 9.4ch;
-  font-size: clamp(3.15rem, 6.6vw, 6.2rem);
+  max-width: 11.4ch;
+  font-size: clamp(2.9rem, 5.9vw, 5.65rem);
   line-height: 0.91;
   text-transform: uppercase;
 }
 
-h1 span {
+h1 .h1__line {
   display: block;
 }
 
-h1 span:last-child {
+h1 .h1__line--nowrap {
   white-space: nowrap;
 }
 
@@ -384,6 +387,21 @@ h3 {
   z-index: 3;
 }
 
+.contact-links--single {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-actions:has(> :only-child) {
+  grid-template-columns: minmax(0, auto);
+  justify-content: start;
+}
+
+.hero-actions:has(> :only-child) .button {
+  width: auto;
+  min-width: clamp(240px, 24vw, 320px);
+  padding-inline: 28px;
+}
+
 .button,
 .contact-links a {
   display: inline-flex;
@@ -435,12 +453,29 @@ h3 {
   box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.06);
 }
 
+.button--whatsapp,
+.button--whatsapp-link {
+  color: var(--whatsapp-ink);
+  background: var(--whatsapp-fill);
+  border-color: rgba(36, 49, 38, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 253, 249, 0.16);
+}
+
 .button--secondary:hover,
 .button--secondary:focus-visible,
 .contact-links a:hover,
 .contact-links a:focus-visible {
   background: var(--ink);
   color: var(--white);
+}
+
+.button--whatsapp:hover,
+.button--whatsapp:focus-visible,
+.button--whatsapp-link:hover,
+.button--whatsapp-link:focus-visible {
+  background: var(--whatsapp-fill-strong);
+  color: var(--whatsapp-ink);
+  border-color: rgba(36, 49, 38, 0.22);
 }
 
 .button:disabled {
@@ -657,11 +692,25 @@ h3 {
   box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08);
 }
 
+.section--cta .contact-links a.button--whatsapp-link {
+  color: var(--whatsapp-ink);
+  background: var(--whatsapp-fill);
+  border-color: rgba(36, 49, 38, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 253, 249, 0.16);
+}
+
 .section--cta .contact-links a:hover,
 .section--cta .contact-links a:focus-visible {
   background: rgba(255, 255, 255, 0.06);
   color: var(--white);
   border-color: rgba(255, 255, 255, 0.48);
+}
+
+.section--cta .contact-links a.button--whatsapp-link:hover,
+.section--cta .contact-links a.button--whatsapp-link:focus-visible {
+  background: var(--whatsapp-fill-strong);
+  color: var(--whatsapp-ink);
+  border-color: rgba(36, 49, 38, 0.22);
 }
 
 .site-footer {
@@ -736,39 +785,51 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, auto));
   }
 
+  .hero-actions:has(> :only-child) {
+    grid-template-columns: minmax(0, auto);
+  }
+
+  .hero-actions:has(> :only-child) .button {
+    width: auto;
+  }
+
+  .contact-links--single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
   .button,
   .contact-links a {
     width: auto;
+  }
+
+  .contact-links--single a {
+    width: 100%;
   }
 
 }
 
 @media (min-width: 980px) {
   :root {
-    --content-start: 2;
-    --content-end: 11;
+    --content-start: 1;
+    --content-end: 10;
   }
 
   .journey-line {
-    position: absolute;
-    top: 0;
-    right: clamp(-170px, -10vw, -24px);
-    display: block;
-    width: min(680px, 46vw);
-    height: 100%;
+    display: none;
   }
 
   .site-header__inner {
     grid-template-columns: minmax(0, auto) 1fr;
-    gap: 24px;
-    padding: 12px 0;
+    gap: 22px;
+    padding-block: 10px;
   }
 
   .site-nav {
     display: flex;
     justify-content: flex-end;
-    gap: 28px;
+    gap: 24px;
     min-width: 0;
+    padding-right: clamp(8px, 1.4vw, 20px);
   }
 
   .site-nav a {
@@ -911,14 +972,14 @@ h3 {
 
 @media (max-width: 759px) {
   :root {
-    --container-gutter: 14px;
-    --header-offset: 76px;
+    --container-gutter: 18px;
+    --header-offset: 72px;
     --content-end: 13;
   }
 
   .site-header__inner {
     justify-items: start;
-    padding: 9px 0;
+    padding-block: 9px;
   }
 
   .hero-block {
@@ -956,9 +1017,9 @@ h3 {
   }
 
   h1 {
-    max-width: none;
-    font-size: clamp(2.5rem, 9.7vw, 3.3rem);
-    line-height: 0.92;
+    max-width: 11.4ch;
+    font-size: clamp(2.15rem, 8.15vw, 2.95rem);
+    line-height: 0.93;
   }
 
   .section-head {
@@ -991,11 +1052,6 @@ h3 {
   .hero-panel__body {
     width: 100%;
     max-width: 100%;
-  }
-
-  h1 span:last-child {
-    font-size: 0.8em;
-    white-space: nowrap;
   }
 
   [data-reveal] {

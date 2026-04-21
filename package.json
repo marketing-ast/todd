@@ -2,9 +2,5 @@
   "name": "landingbuh",
   "version": "1.0.0",
   "private": true,
-  "description": "IT accounting landing page with direct WhatsApp contact",
-  "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
-  }
+  "description": "Static IT accounting landing page"
 }
