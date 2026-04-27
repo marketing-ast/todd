@@ -200,6 +200,11 @@ summary {
   z-index: 1;
 }
 
+.hero-block,
+.section {
+  overflow: hidden;
+}
+
 .hero-block {
   padding: 18px 0 48px;
 }
@@ -697,14 +702,18 @@ h3 {
 }
 
 .section-ornaments {
-  display: none;
+  position: absolute;
+  inset: 0;
+  display: block;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.72;
+  overflow: hidden;
+  opacity: 0.3;
 }
 
 .line-object {
   position: absolute;
+  display: none;
   fill: none;
 }
 
@@ -732,6 +741,214 @@ h3 {
 .section--dark .line-object .accent-stroke,
 .section--cta .line-object .accent-stroke {
   stroke: rgba(174, 224, 212, 0.7);
+}
+
+.section-ornaments--hero .line-object--stethoscope {
+  top: 18px;
+  right: -70px;
+  display: block;
+  width: 260px;
+  transform: rotate(8deg);
+}
+
+.section-ornaments--hero .line-object--appointment {
+  right: -52px;
+  bottom: 18px;
+  display: block;
+  width: 210px;
+  transform: rotate(-7deg);
+}
+
+.section-ornaments--hero .line-object--pulse {
+  right: -34px;
+  bottom: 240px;
+  display: block;
+  width: 210px;
+  transform: rotate(-8deg);
+}
+
+.section-ornaments--risks .line-object--risk-meter {
+  top: 54px;
+  right: -62px;
+  display: block;
+  width: 240px;
+  transform: rotate(7deg);
+}
+
+.section-ornaments--risks .line-object--pill-strip {
+  right: -44px;
+  bottom: 132px;
+  display: block;
+  width: 190px;
+  transform: rotate(-10deg);
+}
+
+.section-ornaments--risks .line-object--cash-slip {
+  top: 42%;
+  right: -70px;
+  display: block;
+  width: 230px;
+  transform: rotate(8deg);
+}
+
+.section-ornaments--control .line-object--cash-register {
+  top: 60px;
+  right: -72px;
+  display: block;
+  width: 260px;
+  transform: rotate(7deg);
+}
+
+.section-ornaments--control .line-object--salary-roster {
+  right: -64px;
+  bottom: 116px;
+  display: block;
+  width: 240px;
+  transform: rotate(-7deg);
+}
+
+.section-ornaments--control .line-object--calculator {
+  top: 44%;
+  right: -42px;
+  display: block;
+  width: 150px;
+  transform: rotate(-6deg);
+}
+
+.section-ornaments--diagnostics .line-object--medical-dashboard {
+  top: 64px;
+  right: -76px;
+  display: block;
+  width: 260px;
+  transform: rotate(7deg);
+}
+
+.section-ornaments--diagnostics .line-object--loupe {
+  right: -42px;
+  bottom: 120px;
+  display: block;
+  width: 180px;
+  transform: rotate(-8deg);
+}
+
+.section-ornaments--diagnostics .line-object--process-nodes {
+  top: 48%;
+  right: -70px;
+  display: block;
+  width: 230px;
+  transform: rotate(8deg);
+}
+
+.section-ornaments--formats .line-object--tooth-chart {
+  top: 56px;
+  right: -52px;
+  display: block;
+  width: 230px;
+  transform: rotate(9deg);
+}
+
+.section-ornaments--formats .line-object--ampoules {
+  right: -46px;
+  bottom: 144px;
+  display: block;
+  width: 220px;
+  transform: rotate(-8deg);
+}
+
+.section-ornaments--formats .line-object--patient-card,
+.section-ornaments--formats .line-object--cream-jar {
+  display: block;
+}
+
+.section-ornaments--formats .line-object--patient-card {
+  top: 42%;
+  right: -90px;
+  width: 260px;
+  transform: rotate(-6deg);
+}
+
+.section-ornaments--formats .line-object--cream-jar {
+  right: -46px;
+  bottom: 420px;
+  width: 190px;
+  transform: rotate(8deg);
+}
+
+.section-ornaments--team .line-object--context-map {
+  top: 58px;
+  right: -76px;
+  display: block;
+  width: 280px;
+  transform: rotate(6deg);
+}
+
+.section-ornaments--team .line-object--support-headset {
+  right: -44px;
+  bottom: 120px;
+  display: block;
+  width: 210px;
+  transform: rotate(-8deg);
+}
+
+.section-ornaments--team .line-object--folder {
+  top: 44%;
+  right: -86px;
+  display: block;
+  width: 280px;
+  transform: rotate(-6deg);
+}
+
+.section-ornaments--faq .line-object--question-badge {
+  top: 44px;
+  right: -42px;
+  display: block;
+  width: 170px;
+  transform: rotate(10deg);
+}
+
+.section-ornaments--faq .line-object--paper-chain {
+  right: -72px;
+  bottom: 120px;
+  display: block;
+  width: 260px;
+  transform: rotate(-6deg);
+}
+
+.section-ornaments--faq .line-object--tabs {
+  top: 48%;
+  right: -82px;
+  display: block;
+  width: 250px;
+  transform: rotate(7deg);
+}
+
+.section-ornaments--cta .line-object--phone-chat {
+  top: 48px;
+  right: -44px;
+  display: block;
+  width: 190px;
+  transform: rotate(8deg);
+}
+
+.section-ornaments--cta .line-object--bank-transfer {
+  right: -76px;
+  bottom: 104px;
+  display: block;
+  width: 260px;
+  transform: rotate(-7deg);
+}
+
+.section-ornaments--cta .line-object--payment-terminal {
+  top: 44%;
+  right: -38px;
+  display: block;
+  width: 140px;
+  transform: rotate(6deg);
+}
+
+.section--dark .section-ornaments,
+.section--cta .section-ornaments {
+  opacity: 0.24;
 }
 
 [data-reveal] {
@@ -908,20 +1125,21 @@ h3 {
   }
 
   .section-ornaments {
-    position: absolute;
     top: 0;
     right: clamp(-150px, -8vw, -20px);
-    display: block;
-    width: min(690px, 42vw);
+    left: auto;
+    width: min(780px, 46vw);
     height: 100%;
+    opacity: 0.66;
+  }
+
+  .section--dark .section-ornaments,
+  .section--cta .section-ornaments {
     opacity: 0.58;
   }
 
-  .section-ornaments--control,
-  .section-ornaments--formats,
-  .section-ornaments--faq {
-    right: auto;
-    left: clamp(-410px, -29vw, -300px);
+  .section-ornaments .line-object {
+    display: block;
   }
 
   .section-ornaments--hero .line-object--chart {
@@ -945,6 +1163,20 @@ h3 {
     transform: rotate(8deg);
   }
 
+  .section-ornaments--hero .line-object--stethoscope {
+    top: 132px;
+    right: 308px;
+    width: 320px;
+    transform: rotate(-10deg);
+  }
+
+  .section-ornaments--hero .line-object--appointment {
+    top: 560px;
+    right: 252px;
+    width: 330px;
+    transform: rotate(7deg);
+  }
+
   .section-ornaments--risks .line-object--case-sheet {
     top: 28px;
     right: 28px;
@@ -959,18 +1191,46 @@ h3 {
     transform: rotate(-8deg);
   }
 
+  .section-ornaments--risks .line-object--pill-strip {
+    top: 132px;
+    right: 338px;
+    width: 250px;
+    transform: rotate(-11deg);
+  }
+
+  .section-ornaments--risks .line-object--risk-meter {
+    top: 570px;
+    right: 42px;
+    width: 360px;
+    transform: rotate(7deg);
+  }
+
   .section-ornaments--control .line-object--calculator {
     top: 36px;
-    left: 22px;
-    width: 238px;
+    right: 44px;
+    width: 250px;
     transform: rotate(-4deg);
   }
 
   .section-ornaments--control .line-object--ledger {
-    top: 330px;
-    left: 88px;
-    width: 340px;
+    top: 328px;
+    right: 236px;
+    width: 380px;
     transform: rotate(7deg);
+  }
+
+  .section-ornaments--control .line-object--cash-register {
+    top: 594px;
+    right: 30px;
+    width: 360px;
+    transform: rotate(-6deg);
+  }
+
+  .section-ornaments--control .line-object--salary-roster {
+    top: 84px;
+    right: 320px;
+    width: 330px;
+    transform: rotate(8deg);
   }
 
   .section-ornaments--diagnostics .line-object--loupe {
@@ -987,18 +1247,53 @@ h3 {
     transform: rotate(-6deg);
   }
 
+  .section-ornaments--diagnostics .line-object--process-nodes {
+    top: 574px;
+    right: 42px;
+    width: 360px;
+    transform: rotate(5deg);
+  }
+
+  .section-ornaments--diagnostics .line-object--medical-dashboard {
+    top: 150px;
+    right: 330px;
+    width: 330px;
+    transform: rotate(-7deg);
+  }
+
   .section-ornaments--formats .line-object--patient-card {
     top: 48px;
-    left: 18px;
-    width: 350px;
+    right: 42px;
+    width: 390px;
     transform: rotate(-5deg);
   }
 
   .section-ornaments--formats .line-object--blister {
-    top: 332px;
-    left: 142px;
+    top: 282px;
+    right: 330px;
     width: 230px;
     transform: rotate(10deg);
+  }
+
+  .section-ornaments--formats .line-object--tooth-chart {
+    top: 516px;
+    right: 56px;
+    width: 340px;
+    transform: rotate(7deg);
+  }
+
+  .section-ornaments--formats .line-object--ampoules {
+    top: 136px;
+    right: 424px;
+    width: 260px;
+    transform: rotate(-7deg);
+  }
+
+  .section-ornaments--formats .line-object--cream-jar {
+    top: 656px;
+    right: 342px;
+    width: 270px;
+    transform: rotate(-9deg);
   }
 
   .section-ornaments--team .line-object--folder {
@@ -1015,18 +1310,46 @@ h3 {
     transform: rotate(-7deg);
   }
 
+  .section-ornaments--team .line-object--context-map {
+    top: 528px;
+    right: 22px;
+    width: 360px;
+    transform: rotate(7deg);
+  }
+
+  .section-ornaments--team .line-object--support-headset {
+    top: 106px;
+    right: 410px;
+    width: 260px;
+    transform: rotate(-8deg);
+  }
+
   .section-ornaments--faq .line-object--tabs {
     top: 26px;
-    left: 22px;
-    width: 330px;
+    right: 54px;
+    width: 370px;
     transform: rotate(5deg);
   }
 
   .section-ornaments--faq .line-object--stamp {
     top: 270px;
-    left: 150px;
+    right: 340px;
     width: 230px;
     transform: rotate(-9deg);
+  }
+
+  .section-ornaments--faq .line-object--paper-chain {
+    top: 426px;
+    right: 44px;
+    width: 360px;
+    transform: rotate(6deg);
+  }
+
+  .section-ornaments--faq .line-object--question-badge {
+    top: 120px;
+    right: 448px;
+    width: 220px;
+    transform: rotate(-7deg);
   }
 
   .section-ornaments--cta .line-object--message {
@@ -1041,6 +1364,20 @@ h3 {
     right: 282px;
     width: 220px;
     transform: rotate(-6deg);
+  }
+
+  .section-ornaments--cta .line-object--phone-chat {
+    top: 84px;
+    right: 420px;
+    width: 260px;
+    transform: rotate(8deg);
+  }
+
+  .section-ornaments--cta .line-object--bank-transfer {
+    top: 420px;
+    right: 54px;
+    width: 360px;
+    transform: rotate(-7deg);
   }
 }
 
